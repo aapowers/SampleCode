@@ -1,0 +1,33 @@
+//Sample Code from learning JavaScript using codeacademy.
+
+//friends is an object that acts as a contact book
+var friends = {
+    jo: {
+        firstName: "Jo",
+        lastName: "James",
+        number: "(909) 323-5432",
+        address:['12343 Apple Court', 'Paeville', 'CA', '92157']},
+    sal: {
+        firstName: "Sal",
+        lastName: "Salamander",
+        number: "(909) 212-3333",
+        address: ['111 Salamander Street', 'Seattle', 'WA', '98333'] }
+};
+
+//list takes friends and prints out the objects in it
+var list = function (friends) {
+    for (var key in friends) {
+        console.log(key);
+    }
+}
+
+//search takes a name and if someone in the friends contacts has the same name, 
+//it prints out and returns all of the information that is stored with the name
+var search = function(name) {
+    for(var key in friends) {
+        if(friends[key].firstName === name) {
+            console.log(friends[key]);
+            return friends[key];
+        }
+    }
+}
